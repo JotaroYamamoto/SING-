@@ -22,7 +22,7 @@
       </div>
     </input>
       <div class='header__right'>
-        <a class='header__right--post' href="">投稿</a>
+        <a class='header__right--post' href="posts/new">投稿</a>
         <a class='header__right--mypage' href="">マイページ</a>
       </div>
     </header>

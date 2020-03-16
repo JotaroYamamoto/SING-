@@ -15,4 +15,8 @@ class PostsController extends Controller
     {
         return view('posts.new');
     }
+    public function show()
+    {
+        return view('posts.show');
+    }
 }

@@ -105,10 +105,11 @@ a{
 /* 投稿一覧部分 */
 .main--contents{
   background-color:white;
-
   max-width: 1000px;
+  min-width: 620px;
   margin: 0 auto;
   z-index: 1;
+  width: 100%;
 }
 .main-index{
   padding: 15px;
@@ -228,6 +229,260 @@ a{
 .LII a:hover{
   text-decoration: underline;
 }
+
+
+
+
+/* 投稿画面 */
+/* 投稿画面上部 */
+.newtop{
+  border-top: 1px solid #e8e8e8;
+  padding: 15px;
+}
+.newA{
+  padding: 15px;
+}
+/* 投稿画面下部 */
+.newbottom{
+  border-top: 1px solid #e8e8e8;
+  padding:15px;
+}
+.newlyrics{
+  padding: 15px;
+}
+.newpoint{
+
+  padding: 15px;
+  margin-top: 20px;
+}
+/* 送信ボタン */
+.newsubmit{
+  border-top: 1px solid #e8e8e8;
+  padding:40px;
+}
+.btnA{
+  margin: 15px 0 0;
+  background: rgb(250, 75, 52);;
+  border: 1px solid rgb(250, 75, 52);;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 550;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+
+
+/* 詳細画面 */
+/* 詳細画面上部 */
+.showtop{
+  padding: 16px 16px 0;
+}
+.showby{
+  display:flex;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.showuser{
+  display: flex;
+  align-items: center;
+}
+.showimg{
+  border-radius: 0.2em;
+  width: 35px;
+  height: 35px;
+  margin-top: 2px;
+  margin-right: 10px;
+  
+}
+.showname{
+  font-size: 1.4rem;
+  color: inherit;
+}
+
+.showdate{
+  color: #999;
+  font-size: 1.2rem;
+  margin-right: 16px;
+}
+.showabout{
+  margin-top: 15px;
+}
+.showtitle{
+font-size: 50px;
+font-weight: 540;
+
+}
+.showsinger{
+font-size:50px;
+font-weight: 540;
+}
+/* 良いね・編集・削除ボタン */
+.showbtn{
+  display: flex;
+  justify-content: space-between;
+}
+.showgood{
+  margin: 15px 0 0;
+  background: rgb(250, 75, 52);;
+  border: 1px solid rgb(250, 75, 52);;
+  color: #fff;
+  display: block;
+  width: 200px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 550;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+/* 詳細画面下部 */
+.showbottom{
+  padding:15px;
+  
+}
+.showlyrics{
+  
+}
+.showpoint{
+margin-bottom: 20px;
+
+}
+
+
+/* 編集・削除ボタン */
+.editor{
+  border-top: 1px solid #e8e8e8;
+  padding:15px;
+  display: flex;
+  justify-content: center;
+
+
+}
+.editbtn{
+  margin: 0 10px 0 0;
+  background: rgb(250, 75, 52);;
+  border: 1px solid rgb(250, 75, 52);;
+  color: #fff;
+  display: block;
+  width: 100px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 550;
+  border: 1px solid transparent;
+  text-align: center;
+}
+.deletebtn{
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  display: block;
+  width: 100px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 550;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* !!!!!!!!!テンプレ!!!!!!!!! */
+
+/* テキストフォームテンプレ */
+.inputA{
+  width: 80%;
+  margin: 8px 0 0;
+  height: 26px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 550;
+}
+/* 必須テンプレ */
+.HS{
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+.textA{
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* テキストエリアテンプレ */
+.areaA{
+  margin: 12px 0 0;
+  display: block;
+  width: 90%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+
+}
+.showindex{
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.1em;
+  font-weight: bold;
+  line-height: 1.5;
+  font-feature-settings: "palt";
+  margin-top: 2.2em;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
