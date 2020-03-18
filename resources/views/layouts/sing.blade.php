@@ -33,6 +33,7 @@
       <div class='main--contents'>
         @yield('content')
       </div>
+        @yield('pagination')
     </div>
 
 
@@ -40,7 +41,7 @@
       <div class='footer--content'>
         <div class='footer--content__left'>
           <div class='ft-title'>SING!</div>
-          <div class='ft-textL'>音楽好きのための英語学習サービス</div>
+          <div class='ft-textL'>音楽ファンのための英語学習サービス</div>
         </div>
         <div class='footer--content__right'>
           <div class='ft-SING'>

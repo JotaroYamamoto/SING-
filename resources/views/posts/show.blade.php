@@ -9,8 +9,7 @@
     <div class='showdate'><span>投稿日：</span>2020/01/01</div>
   </div>
   <div class='showabout'>
-    <div class='showtitle'>{{$form->title}}</div>
-    <div class='showsinger'><span>/</span> {{$form->composer}}</div>
+    <div class='showtitle'>{{$form->title}} ({{$form->composer}})</div>
   </div>
   <div class='showbtn'>
     <div class='showgood'><span class="sing">SING!：</span>500</div>
@@ -19,11 +18,11 @@
 <div class='showbottom'>
   <div class='showlyrics'>
     <h3 class='showindex'>歌詞</h3>
-    <div class='lyrics'>{{$form->lyrics}}</div>
+    <p class='lyrics'>{!! $form->mark_body !!}</p>
   </div>
   <div class='showpoint'>
     <h3 class='showindex'>学習ポイント(単語・熟語・文法・慣用句など)</h3>
-    <div class='point'>{{$form->point}}</div>
+    <p class='point'>{{$form->point}}</p>
     <div></div>
   </div>
 </div>

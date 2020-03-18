@@ -28,16 +28,16 @@
         <div>
           <div class='newlyrics'>
             <div class='textA'>歌詞<span class='HS'>必須</span></div>
-            <textarea name='lyrics' value="{{old('lyrics')}}" class ="areaA" name="" id="" cols="50" rows="55" placeholder= 'マークダウン記法が利用できます。
+            <textarea name='lyrics' class ="areaA" name="" id="" cols="50" rows="55" placeholder= 'マークダウン記法が利用できます。
             
     > In the town where I was born lived a man who sailed to sea
     僕が生まれた街の中で海へ航海していた男がいたんだ。
     > And he told us of his life intheland of submarines
-    そして彼は僕たちに人生について語ってくれた。潜水艦の中の大地の話を。'></textarea>
+    そして彼は僕たちに人生について語ってくれた。潜水艦の中の大地の話を。'>{{old('lyrics')}}</textarea>
           </div>
           <div class='newpoint'>
             <div class='textA'>学習ポイント(単語・熟語・文法・慣用句など)</div>
-            <textarea name='point' value="{{old('post')}}" class ='areaA' name="" id="" cols="50" rows="30" placeholder='マークダウン記法が利用できます。'></textarea>
+            <textarea name='point' class ='areaA' name="" id="" cols="50" rows="30" placeholder='マークダウン記法が利用できます。'>{{old('post')}}</textarea>
           </div>
         </div>
       </div>

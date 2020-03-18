@@ -10,7 +10,7 @@ class PostsController extends Controller
     //
     public function index()
     {
-        $posts=Post::all();
+        $posts=Post::simplePaginate(20);
         return view('posts.index',['posts'=>$posts]);
     }
     public function add(Request $request)
@@ -67,4 +67,5 @@ class PostsController extends Controller
         Post::find($request->id)->delete();
         return redirect('/posts');
     }
+    
 }
