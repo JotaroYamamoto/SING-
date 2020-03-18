@@ -12,7 +12,7 @@
 
     <header class='header'>
       <div class='header__left'>
-        <div class='header__left--title'>SING!</div>
+        <a  href ="/posts" class='header__left--title'>SING!</a>
       </div>
       <div class='header__center'>
         <input type='text' class='header__center--search' placeholder="A SONG!">
@@ -22,7 +22,7 @@
       </div>
     </input>
       <div class='header__right'>
-        <a class='header__right--post' href="posts/new">投稿</a>
+        <a class='header__right--post' href="posts/add">投稿</a>
         <a class='header__right--mypage' href="">マイページ</a>
       </div>
     </header>

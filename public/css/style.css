@@ -2,10 +2,22 @@
 .wrapper{
   font-family: -apple-system, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
   color: rgb(51, 51, 51);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 a{
   text-decoration: none;
 }
+.header__left--title{
+  color:#fff;
+}
+/* singロゴ */
+.sing{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+
+
+
 /* ヘッダー */
 .header{
   height: 85px;
@@ -149,6 +161,10 @@ a{
   line-height: 1.4;
   word-wrap: break-word;
 
+
+}
+.posttitle :hover{
+  text-decoration: underline;
 }
 .postby{
   display: -webkit-box;
@@ -394,6 +410,12 @@ margin-bottom: 20px;
 }
 
 
+/* 削除ページ修正 */
+.delA{
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 15px;
+}
+
 
 
 
@@ -404,7 +426,7 @@ margin-bottom: 20px;
 /* テキストフォームテンプレ */
 .inputA{
   width: 80%;
-  margin: 8px 0 0;
+  margin: 10px 0 0;
   height: 26px;
   padding: 10px 16px 8px;
   border-radius: 4px;
