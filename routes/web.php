@@ -26,3 +26,6 @@ Route::get('posts/show','PostsController@show');
 
 Route::get('posts/del','PostsController@delete');
 Route::post('posts/del','PostsController@remove');
+
+Route::get('posts/find','PostsController@find');
+Route::post('posts/find','PostsController@search');

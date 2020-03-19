@@ -9,7 +9,7 @@
               <img src="{{$post->image}}">
             </div>
             <div class='postview'>
-              <a href='posts/show?id={{$post->id}}' class='posttitle'><span>{{$post->title}} / {{$post->composer}}</span></a>
+              <a href='/posts/show?id={{$post->id}}' class='posttitle'><span>{{$post->title}} / {{$post->composer}}</span></a>
               <div class='postby'><div class='postbyname'>投稿者:JotaroYamamoto</div><div>SING!:321</div></div>
             </div>
           </div>

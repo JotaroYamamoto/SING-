@@ -11,11 +11,11 @@ class PostsController extends Controller
     public function index()
     {
         $posts=Post::simplePaginate(20);
-        return view('posts.index',['posts'=>$posts]);
+        return view('posts.index',['posts'=>$posts],['input'=>'']);
     }
     public function add(Request $request)
     {
-        return view('posts.add');
+        return view('posts.add',['input'=>'']);
     }
     public function create(Request $request)
     {
@@ -30,17 +30,17 @@ class PostsController extends Controller
         $post->image=$request->image;
         $post->point=$request->point;
         $post->save();
-        return redirect('/posts');
+        return redirect('/posts',['input'=>'']);
     }
     public function show(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.show',['form'=>$post]);
+        return view('posts.show',['form'=>$post],['input'=>'']);
     }
     public function edit(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.edit',['form'=>$post]);
+        return view('posts.edit',['form'=>$post],['input'=>'']);
     }
     public function update(Request $request)
     {
@@ -60,12 +60,22 @@ class PostsController extends Controller
     public function delete(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.del',['form'=>$post]);
+        return view('posts.del',['form'=>$post],['input'=>'']);
     }
     public function remove(Request $request)
     {
         Post::find($request->id)->delete();
-        return redirect('/posts');
+        return redirect('/posts',['input'=>'']);
     }
-    
+    public function find(Request $request)
+    {
+        return view('posts/find',['input'=>'']);
+
+    }
+    public function search(Request $request)
+    {
+        $posts = Post::where('title',$request->input)->get();
+        $param =['input'=>$request->input,'posts'=>$posts];
+        return view('posts.find',$param);
+    }
 }

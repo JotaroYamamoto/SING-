@@ -15,14 +15,18 @@
         <a  href ="/posts" class='header__left--title'>SING!</a>
       </div>
       <div class='header__center'>
-        <input type='text' class='header__center--search' placeholder="A SONG!">
+        <form action="/posts/find"method="post">
+        @csrf
+        <input type='text' class='header__center--search' placeholder="A SONG!" name='input' value='{{$input}}'>
+        <input type="submit" style="display:none;">
+        </form>
         <div class='hd-btn'>
           <span class="fa fa-search"></span>
         </div>
       </div>
     </input>
       <div class='header__right'>
-        <a class='header__right--post' href="posts/add">投稿</a>
+        <a class='header__right--post' href="/posts/add">投稿</a>
         <a class='header__right--mypage' href="">マイページ</a>
       </div>
     </header>
