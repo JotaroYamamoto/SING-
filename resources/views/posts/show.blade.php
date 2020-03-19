@@ -6,7 +6,7 @@
       <img src ='https://shop38-makeshop.akamaized.net/shopimages/getback/000000003072_MaVIayk.jpg' class='showimg'></img>
       <div class='showname'>JotaroYamamoto</div>
     </div>
-    <div class='showdate'><span>投稿日：</span>2020/01/01</div>
+    <div class='showdate'><span>投稿日：</span>{{$form->created_at}}</div>
   </div>
   <div class='showabout'>
     <div class='showtitle'>{{$form->title}} ({{$form->composer}})</div>
@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class='editor'>
-      <a href='edit?id={{$form->id}}' class='editbtn'>編集</a>
-      <a href='del?id={{$form->id}}' class='deletebtn'>削除</a>
+      <a href='/posts/edit?id={{$form->id}}' class='editbtn'>編集</a>
+      <a href='/posts/del?id={{$form->id}}' class='deletebtn'>削除</a>
 </div>
 @endsection
