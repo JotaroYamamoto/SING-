@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
     //
     public function index()
     {
+        $user = Auth::user();
         $posts=Post::simplePaginate(20);
-        return view('posts.index',['posts'=>$posts],['input'=>'']);
+        $param=['posts'=>$posts,'input'=>'','user' =>$user];
+        return view('posts.index',$param);
     }
     public function add(Request $request)
     {
@@ -22,25 +25,28 @@ class PostsController extends Controller
         $post = new Post;
         $form =$request->all();
         unset($form['_token']);
+        $post->user_id = $request->user()->id;
         $post->title=$request->title;
         $post->composer=$request->composer;
         $post->url=$request->url;
         $post->lyrics=$request->lyrics;
-        $post->url=$request->url;
         $post->image=$request->image;
         $post->point=$request->point;
         $post->save();
-        return redirect('/posts',['input'=>'']);
+        return redirect('/');
     }
     public function show(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.show',['form'=>$post],['input'=>'']);
+        $user = Auth::user();
+        $param=['post'=>$post,'input'=>'','user' =>$user];
+        return view('posts.show',$param);
     }
     public function edit(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.edit',['form'=>$post],['input'=>'']);
+        $param=['post'=>$post,'input'=>''];
+        return view('posts.edit',$param);
     }
     public function update(Request $request)
     {
@@ -51,21 +57,21 @@ class PostsController extends Controller
         $post->composer=$request->composer;
         $post->url=$request->url;
         $post->lyrics=$request->lyrics;
-        $post->url=$request->url;
         $post->image=$request->image;
         $post->point=$request->point;
         $post->save();
-        return redirect('/posts');
+        return redirect('/');
     }
     public function delete(Request $request)
     {
         $post=Post::find($request->id);
-        return view('posts.del',['form'=>$post],['input'=>'']);
+        $param=['post'=>$post,'input'=>''];
+        return view('posts.del',$param);
     }
     public function remove(Request $request)
     {
         Post::find($request->id)->delete();
-        return redirect('/posts',['input'=>'']);
+        return redirect('/');
     }
     public function find(Request $request)
     {

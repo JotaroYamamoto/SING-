@@ -18,7 +18,10 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('composer');
             $table->string('lyrics');
-            $table->integer('user_id')->nullable();
+            $table->integer('user_id')->unsigned()->default(1);
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
             $table->string('url')->nullable();
             $table->string('image')->nullable();
             $table->string('point');

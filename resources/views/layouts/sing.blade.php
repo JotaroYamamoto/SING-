@@ -12,7 +12,7 @@
 
     <header class='header'>
       <div class='header__left'>
-        <a  href ="/posts" class='header__left--title'>SING!</a>
+        <a  href ="/" class='header__left--title'>SING!</a>
       </div>
       <div class='header__center'>
         <form action="/posts/find"method="post">
@@ -26,9 +26,14 @@
       </div>
     </input>
       <div class='header__right'>
+      @if(Auth::check())
         <a class='header__right--post' href="/posts/add">投稿</a>
         <a class='header__right--mypage' href="">マイページ</a>
       </div>
+      @else
+        <a href="/login" class='header__right--post'>ログイン</a>
+        <a href="/register" class='header__right--post'>登録</a>
+      @endif
     </header>
 
 
