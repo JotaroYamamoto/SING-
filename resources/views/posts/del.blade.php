@@ -10,13 +10,16 @@
     </div>
   </div>
   <div class='showbottom'>
+    <div>
+    {!! $post->mark_body3 !!}
+    </div>
     <div class='showlyrics'>
       <h3 class='showindex'>歌詞</h3>
-      <div class='lyrics'>{{$post->lyrics}}</div>
+      <div class='lyrics'>{!! $post->mark_body !!}</div>
     </div>
     <div class='showpoint'>
       <h3 class='showindex'>学習ポイント(単語・熟語・文法・慣用句など)</h3>
-      <div class='point'>{{$post->point}}</div>
+      <div class='point'>{!! $post->mark_body2 !!}</div>
       <div></div>
     </div>
   </div>

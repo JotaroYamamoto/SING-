@@ -16,7 +16,7 @@
           <input class='inputA' type='text' placeholder='The Beatles' name='composer' value="{{old('composer')}}"></input>
         </div>
         <div class='newA'>
-          <div class='textA'>YouTubeリンク</div>
+          <div class='textA'>YouTube動画の埋め込み</div>
           <input class='inputA' type='text' placeholder='https://www.youtube.com/watch?v=m2uTFF_3MaA' name='url' value="{{old('url')}}"></input>
         </div>
         <div class='newA'>

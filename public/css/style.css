@@ -362,6 +362,10 @@ font-weight: 540;
   border: 1px solid transparent;
   text-align: center;
 }
+.youtube{
+  text-align: center;
+  padding-top: 30px;
+}
 
 /* 詳細画面下部 */
 .showbottom{
@@ -484,7 +488,7 @@ margin-bottom: 20px;
 blockquote{
   border-left: 5px solid #ddd;
   color: #777;
-  padding: 0.3rem 0 0.3rem 0.7rem;
+  padding: 0.1rem 0 0.1rem 0.7rem;
   margin: 1.5em 0;
 
 }
