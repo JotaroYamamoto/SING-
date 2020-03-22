@@ -30,6 +30,8 @@ Route::post('posts/del','PostsController@remove');
 Route::get('posts/find','PostsController@find');
 Route::post('posts/find','PostsController@search');
 
+Route::get('posts/mypage','PostsController@mypage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
