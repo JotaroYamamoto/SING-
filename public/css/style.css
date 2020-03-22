@@ -85,6 +85,9 @@ p{
 
 
 }
+.header__right--post:hover{
+  background-color: rgb(231, 60, 47);
+}
 .header__right--mypage{
   display: -webkit-box;
   display: flex;
@@ -102,6 +105,9 @@ p{
   user-select: none;
   padding: 5px 16px 5px 16px;
 
+}
+.header__right--mypage:hover{
+  background-color:rgb(231, 60, 47);
 }
 
 
@@ -348,11 +354,11 @@ font-weight: 540;
 /* 良いね・編集・削除ボタン */
 .showbtn{
   text-align: center;
+  margin-top:20px;
 }
 .showgood{
-  margin-top:30px;
-  background: rgb(250, 75, 52);;
-  border: 1px solid rgb(250, 75, 52);;
+  background: rgb(250, 75, 52);
+  border: 1px solid rgb(250, 75, 52);
   color: #fff;
   display: block;
   width: 180px;
@@ -360,11 +366,15 @@ font-weight: 540;
   font-size: 16px;
   font-weight: 550;
   border: 1px solid transparent;
-  text-align: center;
+  margin: 0 auto;
+  
+}
+.showgood:hover{
+  background-color: rgb(235, 77, 57);
 }
 .youtube{
   text-align: center;
-  padding-top: 30px;
+
 }
 
 /* 詳細画面下部 */
@@ -403,6 +413,10 @@ margin-bottom: 20px;
   border: 1px solid transparent;
   text-align: center;
 }
+.editbtn:hover{
+  background-color: rgb(235, 77, 57);
+
+}
 .deletebtn{
   background: #aaa;
   border: 1px solid #aaa;
@@ -414,6 +428,9 @@ margin-bottom: 20px;
   font-weight: 550;
   border: 1px solid transparent;
   text-align: center;
+}
+.deletebtn:hover{
+  background-color:rgb(138, 136, 136);
 }
 
 
