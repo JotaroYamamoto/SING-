@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,7 +13,8 @@ class PostsController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $posts=Post::simplePaginate(20);
+        $posts=Post::orderBy('created_at','desc')
+            ->simplePaginate(20);
         $param=['posts'=>$posts,'input'=>'','user' =>$user];
         return view('posts.index',$param);
     }
@@ -83,5 +85,21 @@ class PostsController extends Controller
         $posts = Post::where('title',$request->input)->get();
         $param =['input'=>$request->input,'posts'=>$posts];
         return view('posts.find',$param);
+    }
+    public function mypage()
+    {
+        $user = Auth::user();
+        $posts=Post::orderBy('created_at','desc')
+            ->simplePaginate(20);
+        $param=['posts'=>$posts,'input'=>'','user' =>$user];
+        return view('posts.mypage',$param);
+    }
+    public function userpage(Request $request)
+    {
+        $user = User::find($request->id);
+        $posts=Post::orderBy('created_at','desc')
+            ->simplePaginate(20);
+        $param=['posts'=>$posts,'input'=>'','user' =>$user];
+        return view('posts.userpage',$param);        
     }
 }

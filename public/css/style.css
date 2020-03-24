@@ -185,6 +185,11 @@ p{
 }
 .postbyname{
   margin-right: 5px;
+  color: #999;
+
+}
+.postbyname:hover{
+text-decoration: underline;
 }
 /* フッター */
 .footer{
