@@ -4,7 +4,7 @@
   <div class='showby'>
     <div class='showuser'>
       <img src ='https://pbs.twimg.com/profile_images/447676684787937280/BmxG3QCQ_400x400.jpeg' class='showimg'></img>
-      <div class='showname'>{{$post->user->name}}</div>
+      <a class='showname' href='/posts/userpage?id={{$post->user->id}}'>{{$post->user->name}}</a>
     </div>
     <div class='showdate'><span>投稿日：</span>{{$post->created_at}}</div>
   </div>
@@ -31,8 +31,8 @@
 </div>
 
 <div class='editor'>
-  @if (($post->user_id))
       <a href="/" class="editbtn">戻る</a>
+  @if( ($post->user->id) === ( Auth::user()->id) )
       <a href='/posts/edit?id={{$post->id}}' class='editbtn'>編集</a>
       <a href='/posts/del?id={{$post->id}}' class='deletebtn'>削除</a>
   @endif

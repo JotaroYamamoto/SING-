@@ -28,7 +28,7 @@
       <div class='header__right'>
       @if(Auth::check())
         <a class='header__right--post' href="/posts/add">投稿</a>
-        <a class='header__right--mypage' href="">マイページ</a>
+        <a class='header__right--mypage' href="/posts/mypage">マイページ</a>
       </div>
       @else
         <a href="/login" class='header__right--post'>ログイン</a>

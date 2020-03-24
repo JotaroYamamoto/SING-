@@ -1,9 +1,10 @@
 @extends('layouts.sing')
 @section('content')
         <div class='main-index'>
-          <div class='TT'>新着投稿</div>
+          <div class='TT'>{{$user->name}}の投稿</div>
         </div>
         @foreach($posts as $post)
+        @if( ($post->user->id) === ( $user->id) )
           <div class= 'apost'>
             <div class='postimg'>
               <img src="{{$post->image}}">
@@ -13,11 +14,9 @@
               <div class='postby'><a class='postbyname' href='/posts/userpage?id={{$post->user->id}}'>投稿者: {{$post->user->name}}</a><div>SING!:321</div></div>
             </div>
           </div>
-          
+        @endif
         @endforeach
-        
 @endsection
-
 @section('pagination')
 {{$posts->links()}}
 @endsection
