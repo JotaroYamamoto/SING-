@@ -32,9 +32,11 @@
 
 <div class='editor'>
       <a href="/" class="editbtn">戻る</a>
-  @if( ($post->user->id) === ( Auth::user()->id) )
-      <a href='/posts/edit?id={{$post->id}}' class='editbtn'>編集</a>
-      <a href='/posts/del?id={{$post->id}}' class='deletebtn'>削除</a>
+  @if(Auth::check())
+    @if(($post->user->id)===(Auth::user()->id))
+        <a href='/posts/edit?id={{$post->id}}' class='editbtn'>編集</a>
+        <a href='/posts/del?id={{$post->id}}' class='deletebtn'>削除</a>
+    @endif
   @endif
 </div>
 
