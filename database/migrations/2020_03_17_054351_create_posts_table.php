@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
                 ->onDelete('cascade');
             $table->string('url')->nullable();
             $table->string('image')->nullable();
-            $table->string('point');
+            $table->string('point')->nullable();
             $table->timestamps();
         });
     }
