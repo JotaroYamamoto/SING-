@@ -23,7 +23,8 @@ class PostsController extends Controller
         return view('posts.add',['input'=>'']);
     }
     public function create(Request $request)
-    {
+    {   
+        $this->validate($request, Post::$rules);
         $post = new Post;
         $form =$request->all();
         unset($form['_token']);
