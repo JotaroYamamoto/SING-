@@ -40,4 +40,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Post')->latest();
     }
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

@@ -6,10 +6,16 @@ use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
+
 
 class PostsController extends Controller
 {
     //
+    public function __construct()
+    {
+      $this->middleware('auth', array('except' => 'index'));
+    }
     public function index()
     {
         $user = Auth::user();
@@ -41,8 +47,9 @@ class PostsController extends Controller
     public function show(Request $request)
     {
         $post=Post::find($request->id);
+        $like = $post->likes()->where('user_id',Auth::user()->id)->first();
         $user = Auth::user();
-        $param=['post'=>$post,'input'=>'','user' =>$user];
+        $param=['post'=>$post,'input'=>'','user' =>$user,'like' =>$like];
         return view('posts.show',$param);
     }
     public function edit(Request $request)
@@ -103,4 +110,5 @@ class PostsController extends Controller
         $param=['posts'=>$posts,'input'=>'','user' =>$user];
         return view('posts.userpage',$param);        
     }
+
 }

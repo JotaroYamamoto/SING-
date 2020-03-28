@@ -23,6 +23,7 @@ Route::get('posts/edit','PostsController@edit');
 Route::post('posts/edit','PostsController@update');
 
 Route::get('posts/show','PostsController@show');
+Route::get('posts/show?id={id}','PostsController@show');
 
 Route::get('posts/del','PostsController@delete');
 Route::post('posts/del','PostsController@remove');
@@ -33,6 +34,10 @@ Route::post('posts/find','PostsController@search');
 Route::get('posts/mypage','PostsController@mypage');
 
 Route::get('posts/userpage','PostsController@userpage');
+
+Route::post('/posts/{post}/likes', 'LikesController@store');
+Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
+
 
 Auth::routes();
 
