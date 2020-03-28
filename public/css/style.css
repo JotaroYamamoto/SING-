@@ -523,10 +523,35 @@ code{
 
 /* ページネーション */
 .pagination{
+  margin-top: 10px;
   list-style: none;
   display: flex;
+  list-style: none;
+  border-radius: .25rem;
 }
 
+.page-item{
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #6c757d;
+  background-color: #fff;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  border: 1px solid #dee2e6;
+}
+.page-link{
+
+
+
+
+}
+
+li{
+  text-align: -webkit-match-parent;
+}
 /* 入力ミスバリデーションエラー */
 .miss{
   color: red;
