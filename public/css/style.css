@@ -372,7 +372,7 @@ font-weight: 540;
   font-weight: 550;
   border: 1px solid transparent;
   margin: 0 auto;
-  
+  border-radius: 50%;
 }
 .showgood:hover{
   background-color: rgb(235, 77, 57);
