@@ -12,9 +12,24 @@
     <div class='showtitle'>{{$post->title}} ({{$post->composer}})</div>
   </div>
   <div class='showbtn'>
-    <div class='showgood'><span class="sing">SING!：</span>500</div>
+    @if (Auth::check())
+      @if ($like)
+        {{ Form::model($post, array('action' => array('LikesController@destroy', $post->id, $like->id))) }}
+          <button type="submit" class="showgood">
+            SING!  {{ $post->likes_count }}
+          </button>
+        {!! Form::close() !!}
+      @else
+        {{ Form::model($post, array('action' => array('LikesController@store', $post->id))) }}
+          <button type="submit" class="showgood">
+            SING!  {{ $post->likes_count }}
+          </button>
+        {!! Form::close() !!}
+      @endif
+    @endif
   </div>
 </div>
+
 <div class='showbottom'>
   <div class='youtube'>
     {!! $post->mark_body3 !!}
