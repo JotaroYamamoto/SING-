@@ -65,6 +65,7 @@ p{
   display: flex;
   font-weight: 550;
 }
+/* 投稿ボタン */
 .header__right--post{
   margin-right: 5vw;
   display: -webkit-box;
@@ -88,6 +89,7 @@ p{
 .header__right--post:hover{
   background-color: rgb(231, 60, 47);
 }
+/* マイページボタン */
 .header__right--mypage{
   display: -webkit-box;
   display: flex;
@@ -109,7 +111,21 @@ p{
 .header__right--mypage:hover{
   background-color:rgb(231, 60, 47);
 }
-
+.header__right--logout{
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  background-color: rgb(214, 54, 43);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 5px 16px 5px 16px;
+}
+.header__right--logout:hover{
+  background-color:rgb(201, 53, 42);
+}
 
 
 /* メイン部分 */
