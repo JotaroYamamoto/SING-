@@ -38,9 +38,6 @@
         <a href="/register" class='header__right--post'>登録</a>
       @endif
     </header>
-
-
-
     <div class='main'>
       <div class='main--contents'>
         @yield('content')
