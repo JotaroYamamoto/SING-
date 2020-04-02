@@ -11,7 +11,7 @@
               </div>
               <div class='postview'>
                 <a href='/posts/show?id={{$post->id}}' class='posttitle'><span>{{$post->title}} / {{$post->composer}}</span></a>
-                <div class='postby'><a class='postbyname' href='/posts/userpage?id={{$post->user->id}}'>投稿者: {{$post->user->name}}</a><div>SING!:321</div></div>
+                <div class='postby'><a class='postbyname' href='/posts/userpage?id={{$post->user->id}}'>投稿者: {{$post->user->name}}</a><div>SING!:{{$post->likes_count}}</div></div>
               </div>
             </div>
           @endforeach
