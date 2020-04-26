@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\User;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
@@ -46,10 +47,11 @@ class PostsController extends Controller
     }
     public function show(Request $request)
     {
+        $comments=Post::find($request->id)->comments;
         $post=Post::find($request->id);
         $like = $post->likes()->where('user_id',Auth::user()->id)->first();
         $user = Auth::user();
-        $param=['post'=>$post,'input'=>'','user' =>$user,'like' =>$like];
+        $param=['post'=>$post,'input'=>'','user' =>$user,'like' =>$like,'comments'=>$comments];
         return view('posts.show',$param);
     }
     public function edit(Request $request)

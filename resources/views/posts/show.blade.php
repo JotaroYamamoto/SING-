@@ -54,5 +54,21 @@
     @endif
   @endif
 </div>
+@endsection
+
+
+
+@section('comments')
+
+@foreach($comments as $comment)
+    {{$comment->message}}
+@endforeach
+
+<form action="/comments"method="post">
+  @csrf
+  <input name="post_id" type="hidden" value="{{$post->id}}">
+  <textarea name="message" id="" cols="30" rows="10"></textarea>
+  <input type="submit">
+</form>
 
 @endsection

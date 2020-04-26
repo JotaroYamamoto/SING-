@@ -44,6 +44,9 @@
       </div>
         @yield('pagination')
     </div>
+    <div class="comments">
+      @yield('comments')
+    </div>
 
 
     <footer class='footer'>

@@ -13,9 +13,7 @@
               <div class='postby'><a class='postbyname' href='/posts/userpage?id={{$post->user->id}}'>投稿者: {{$post->user->name}}</a><div>SING!:{{$post->likes_count}}</div></div>
             </div>
           </div>
-          
         @endforeach
-        
 @endsection
 
 @section('pagination')
