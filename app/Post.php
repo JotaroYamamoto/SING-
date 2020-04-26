@@ -11,12 +11,13 @@ class Post extends Model
 {
     //
     protected $guarded = array('id');
+
+    protected $fillable = ['title','body','summary','user_id'];
     
     public static $rules =array(
         'title'=>'required',
         'composer'=>'required',
         'lyrics' =>'required'
- 
     );
 
     public function parse()
@@ -48,13 +49,10 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    protected $fillable = ['title','body','summary','user_id'];
 
     public function comments(){
         return $this->hasMany('App\Comment');
     }
-
-        
     public function likes()
     {
         return $this->hasMany('App\Like');

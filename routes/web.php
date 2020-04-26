@@ -22,8 +22,8 @@ Route::post('posts/add','PostsController@create');
 Route::get('posts/edit','PostsController@edit');
 Route::post('posts/edit','PostsController@update');
 
-Route::get('posts/show','PostsController@show');
-Route::get('posts/show?id={id}','PostsController@show');
+Route::resource('posts','PostsController',['only'=>['show']]);
+// Route::get('posts/show?id={id}','PostsController@show');
 
 Route::get('posts/del','PostsController@delete');
 Route::post('posts/del','PostsController@remove');
@@ -42,3 +42,5 @@ Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('comments','CommentsController',['only' => ['store']]);

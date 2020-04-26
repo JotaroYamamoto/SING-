@@ -207,6 +207,17 @@ p{
 .postbyname:hover{
 text-decoration: underline;
 }
+/* コメント部分 */
+.comments{
+  padding-top: 30px;
+  padding-left:18% ;
+  padding-right:18% ;
+  padding-bottom: 64px;
+  background-color: #f8f8ff;
+}
+
+
+
 /* フッター */
 .footer{
   background-color: #3e3e3e;
