@@ -22,8 +22,7 @@ Route::post('posts/add','PostsController@create');
 Route::get('posts/edit','PostsController@edit');
 Route::post('posts/edit','PostsController@update');
 
-Route::resource('posts','PostsController',['only'=>['show']]);
-// Route::get('posts/show?id={id}','PostsController@show');
+Route::get('posts/show','PostsController@show');
 
 Route::get('posts/del','PostsController@delete');
 Route::post('posts/del','PostsController@remove');
@@ -44,3 +43,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('comments','CommentsController',['only' => ['store']]);
+
+Route::get('result/ajax','CommentsController@getData');

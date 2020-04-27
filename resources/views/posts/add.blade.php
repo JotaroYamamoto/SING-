@@ -7,7 +7,6 @@
   </div>
   <form action="/posts/add" method="post">
     @csrf
-      
       <div class='newtop'>
         <div class='newA'>
           <div class='textA'>タイトル<span class='HS'>必須<span></div>

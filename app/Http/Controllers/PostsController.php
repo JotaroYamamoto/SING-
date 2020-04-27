@@ -47,9 +47,10 @@ class PostsController extends Controller
     }
     public function show(Request $request)
     {
-        $comments=Post::find($request->id)->comments;
         $post=Post::find($request->id);
+        $comments=Post::find($request->id)->comments;
         $like = $post->likes()->where('user_id',Auth::user()->id)->first();
+        // 現在承認されているユーザー
         $user = Auth::user();
         $param=['post'=>$post,'input'=>'','user' =>$user,'like' =>$like,'comments'=>$comments];
         return view('posts.show',$param);

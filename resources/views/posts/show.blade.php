@@ -59,16 +59,30 @@
 
 
 @section('comments')
-
-@foreach($comments as $comment)
-    {{$comment->message}}
-@endforeach
-
-<form action="/comments"method="post">
-  @csrf
-  <input name="post_id" type="hidden" value="{{$post->id}}">
-  <textarea name="message" id="" cols="30" rows="10"></textarea>
-  <input type="submit">
-</form>
-
+  <div class="comments-contents">
+    <div class="comments-top">
+      <div class="comments-title">コメント投稿</div>
+      <form action="/comments"method="post">
+        @csrf
+        <input name="post_id" type="hidden" value="{{$post->id}}">
+        <input name="user_id" type="hidden" value={{Auth::id()}}>
+        <textarea name="message" id="" cols="30" rows="10" class="areaA" wrap="soft"></textarea>
+        <input class="btnA" type="submit" value="投稿">
+      </form>
+    </div>
+    <div class="comments-bottom">
+      <div class="comments-title">コメント一覧</div>
+      @foreach($comments as $comment)
+      <div class="comment">
+        <div class="comment-top">
+          <div class="comment-name">@ {{$comment->user->name}}</div>
+          <div class="comment-date">{{$comment->created_at}}</div>
+        </div>
+        <div class="comment-main">
+            {{$comment->message}}
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
 @endsection
