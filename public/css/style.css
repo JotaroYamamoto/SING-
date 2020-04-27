@@ -207,17 +207,6 @@ p{
 .postbyname:hover{
 text-decoration: underline;
 }
-/* コメント部分 */
-.comments{
-  padding-top: 30px;
-  padding-left:18% ;
-  padding-right:18% ;
-  padding-bottom: 64px;
-  background-color: #f8f8ff;
-}
-
-
-
 /* フッター */
 .footer{
   background-color: #3e3e3e;
@@ -412,13 +401,62 @@ font-weight: 540;
 /* 詳細画面下部 */
 .showbottom{
   padding:30px;
-  
 }
 .showlyrics{
-  
 }
 .showpoint{
 margin-bottom: 20px;
+}
+/* コメント部分 */
+.comments{
+  padding-top: 30px;
+  padding-left:18% ;
+  padding-right:18% ;
+  padding-bottom: 64px;
+  background-color: #f8f8ff;
+}
+.comments-contents{
+  padding: 16px;
+  background-color: white;
+  max-width: 1000px;
+  min-width: 660px;
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+}
+
+.comments-title{
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.1em;
+  font-weight: bold;
+  font-feature-settings: "palt";
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+.comments-bottom{
+  margin-top: 30px;
+  
+}
+.comment{
+  border-top: 1px solid #ddd;
+  padding: 20px 10px;
+  min-height: 50px;
+}
+.comment-top{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-name{
+
+}
+.comment-date{
+  color: #999;
+
+}
+.comment-main{
+  margin-top: 10px;
+  padding: 15px 0;
 
 }
 
