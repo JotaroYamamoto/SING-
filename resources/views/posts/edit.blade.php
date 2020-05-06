@@ -30,7 +30,6 @@
           <div class='newlyrics'>
             <div class='textA'>歌詞<span class='HS'>必須</span></div>
             <textarea name='lyrics'  class ="areaA" name="" id="" cols="50" rows="55" placeholder= 'マークダウン記法が利用できます。
-            
     > In the town where I was born lived a man who sailed to sea
     僕が生まれた街の中で海へ航海していた男がいたんだ。
     > And he told us of his life intheland of submarines

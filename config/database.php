@@ -93,10 +93,11 @@ return [
 
         'testing' => [
             'driver' => 'sqlite',
+            // 新しいテスト用のdbをインメモリ機能で追加
             'database' => ':memory:',
             'prefix' => '',
             'options' => [
-                PDO::ATTR_PERSISTENT => true,
+                PDO::ATTR_PERSISTENT => false,
             ],
         ],
 
